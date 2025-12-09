@@ -28,10 +28,16 @@ public class ThreatRenderer {
 
         // Calculate threat
         float threatLevel = ThreatCalculator.calculateThreatLevel(target, self);
-        boolean isThreat = ThreatCalculator.isThreat(threatLevel);
 
-        // Color codes: §c = red, §a = green
-        String colorCode = isThreat ? "\u00A7c" : "\u00A7a";
+        // Color codes: §c = red (threat), §e = yellow (equal), §a = green (weak)
+        String colorCode;
+        if (threatLevel > 1.2f) {
+            colorCode = "\u00A7c"; // Red - stronger than you
+        } else if (threatLevel >= 0.8f) {
+            colorCode = "\u00A7e"; // Yellow - about equal
+        } else {
+            colorCode = "\u00A7a"; // Green - weaker than you
+        }
 
         // Prepend skull to display name
         event.displayname = colorCode + SKULL + " \u00A7r" + event.displayname;
