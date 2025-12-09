@@ -1,14 +1,14 @@
 [
 {
-  "modid": "examplemod",
-  "name": "Example Mod",
-  "description": "Example placeholder mod.",
+  "modid": "threatlvl",
+  "name": "Threat Level",
+  "description": "PvP mod that displays threat indicators on player nametags based on their armor, health, and enchantments.",
   "version": "${version}",
   "mcversion": "${mcversion}",
   "url": "",
   "updateUrl": "",
-  "authorList": ["ExampleDude"],
-  "credits": "The Forge and FML guys, for making this example",
+  "authorList": ["Connor"],
+  "credits": "",
   "logoFile": "",
   "screenshots": [],
   "dependencies": []
